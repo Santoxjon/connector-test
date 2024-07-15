@@ -3,10 +3,10 @@ info:
   title: Apideck
   version: 0.0.1
 servers:
-  - url: "https://unify.apideck.com"
+  - url: 'https://unify.apideck.com'
 externalDocs:
   description: Apideck Developer Docs
-  url: "https://developers.apideck.com"
+  url: 'https://developers.apideck.com'
 security:
   - apiKey: []
 paths:
@@ -14,13 +14,17 @@ paths:
     get:
       operationId: hello
       responses:
-        "200":
-          description: "Say hello"
+        '200':
+          description: 'Say hello'
           content: {}
   /space/rockets/{rocketId}:
     get:
       operationId: rocketsOne
+      parameters:
+        - in: path
+          name: rocketId
+          required: true
       responses:
-        "200":
-          description: "Get a rocket"
+        '200':
+          description: 'Get a rocket'
           content: {}

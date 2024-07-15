@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Get one rocket operation should return a 200 response 1`] = `Promise {}`;
+
+exports[`Get one rocket operation should return a 404 response 1`] = `Promise {}`;
