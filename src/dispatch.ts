@@ -1,5 +1,6 @@
-import { Route } from "OpenApiRouter";
-import { handleHello } from "operations/hello";
+import { Route } from 'OpenApiRouter';
+import { handleHello } from 'operations/hello';
+import { handleRocketsOne } from 'operations/rocketsOne';
 
 export interface Result {
   body?: any;
@@ -9,8 +10,12 @@ export interface Result {
 
 export const dispatch = async (route: Route): Promise<Result | null> => {
   switch (route.operation.operationId) {
-    case "hello":
+    case 'hello':
       return await handleHello(route);
+
+    case 'rocketsOne':
+      return await handleRocketsOne(route);
+
     default:
       return null;
   }

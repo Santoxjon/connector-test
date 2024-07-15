@@ -1,0 +1,25 @@
+openapi: 3.0.3
+info:
+  title: SpaceX Api
+  version: 4.0.0
+servers:
+  - url: 'https://api.spacexdata.com'
+externalDocs:
+  description: 'r/SpaceX API Docs'
+  url: 'https://docs.spacexdata.com'
+security:
+  - apiKey: []
+paths:
+  /v4/rockets/{rocketId}:
+    get:
+      operationId: rocketsOne
+      parameters:
+        - in: path
+          name: rocketId
+          required: true
+      responses:
+        '200':
+          description: 'Get rocket information'
+          content: {}
+        '404':
+          description: 'Rocket not found'
